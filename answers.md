@@ -30,3 +30,32 @@
 3.  setColor() with a Color parameter.
 
 4.  The bug is gone, the Rock overrid it, like the Bug does to flowers.
+
+
+###PART TWO###
+
+#QUESTIONS#
+
+1.  sideLength is the length of the square the BoxBug will create
+2.  steps counts the amounts of steps that have already been made by the bug, to keep a running total of the current length of the side it's making and to know when to turn to keep the box the size of sideLength
+3. because the bug needs to rotate 90 degrees, a full right angle, to create a box.
+4. BoxBug inherits the move method from Bug
+5. yes, its sidelength is given when constructed, and doesn't change after that
+6. It can if a rock is put in its path, or it reaches the edge of the grid
+7. steps will be equal to zero when the bug is created and after the bug has turned but before it has made a step, this happens after it can't move forward, or has moved forward equal to sideLength
+
+#EXERCISES#
+
+1.  It creates an Octagon with the sideLength given, instead of a box.
+
+5.  To add another BoxBug to the BoxBugRunner class, you'd first have to initialize it and give it a name, for example: 
+
+BoxBug charlie = new BoxBug(6);
+
+You can now, if you'd like, change its color so you can differentiate it from the other bugs
+
+charlie.setColor(Color.BLUE);
+
+Finally, you have to actually add the BoxBug to the grid
+
+world.add(new Location(4,4), charlie);
