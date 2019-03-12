@@ -59,3 +59,47 @@ charlie.setColor(Color.BLUE);
 Finally, you have to actually add the BoxBug to the grid
 
 world.add(new Location(4,4), charlie);
+
+
+###PART THREE###
+
+#QUESTIONS#
+
+1.  loc1.getRow();
+2.  false
+3.  (4, 4)
+4.  135
+5.  when calling it, you pass it the parameter of the direction, for example:
+
+loc1.getAdjacentLocation(Location.SOUTH);
+
+this will return the location adjacent to the SOUTH of the calling location
+
+1.  use getOccupiedLocations() to get an arrayList of all current locations that are occupied. Using this, you can also get a count of empty locations, just find the total locations, and subtract the occupied locations
+2.  isValid(new Location(10,10));
+3.  The grid is an arrayList of Actors.
+4.  I don't think it would be better to return an array, because that would take way more code. Arrays require a specific length, but you don't always know how many items you're going to get from one of these functions, so by making it an arrayList you don't have to worry about the potential length.
+
+1. All actors have a direction, color and Location
+2. When first constructed, an actor faces North and is Blue
+3. So other objects can extend Actor and inherit its properties while changing what it needs
+4. An actor can't put itself into the grid twice. It gives an error message when you try. An actor CAN take itself out of the grid and then put itself back later.
+5. this.setDirection(this.getDirection() + 90);
+
+1. if (!gr.isValid(next)) {return false}; tests if the next location is valid in the Grid
+2. return (neighbor == null) || (neighbor instanceof Flower); checks if the next position does not exist or is an instance of a flower. Anything else (such as a rock) won't work
+3. isValid and get, to ensure the next location is valid and doesn't already have an actor in it besides a Flower
+4. getAdjacentLocation to find the next location the bug will potentially move to
+5. getLocation getDirection and getGrid
+6. it will remove itself from the grid
+7. it's needed because it stores the bug's location before it moves so it can leave a flower in the Bug's old location once it has moved.
+8. in the Move() method, when creating the Flower it calls getColor() which returns the Bug's color. This is so you can differentiate the flowers left from different Bugs from those left from other Bugs
+9. calling removeSelfFromGrid on a bug does not cause it to leave a Flower behind. However, in the move() method, it does because it acts just as though the bug has moved in that case.
+10. Flower flower = new Flower(getColor());
+flower.putSelfInGrid(gr, loc);
+11. 4 times
+
+##GROUP ACTIVITY##
+
+#ONE#
+a. If it's a rock, it will turn. If it is a Flower it will jump.
