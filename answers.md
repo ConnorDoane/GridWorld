@@ -101,5 +101,20 @@ flower.putSelfInGrid(gr, loc);
 
 ##GROUP ACTIVITY##
 
-#ONE#
-a. If it's a rock, it will turn. If it is a Flower it will jump.
+#SPECIFY#
+
+a. turn
+b. turn
+c. turn
+d. turn
+e. if its one space in front of the jumper, it will jump over it. Otherwise it will turn
+f. no
+
+#DESIGN#
+
+a. Bug
+b. Bug, the Jumper is just a bug but it moves 2 spaces at a time, jumping over other Actors
+c. Yes. No parameters are needed, but we can have a separate constructor that chooses the Color of the Jumper
+d. move(), canMove(), turn()
+e. none
+f. Set up an "obstacle course" in the Grid with different potential cases for Jumpers, and see if they behave as intended
