@@ -118,3 +118,12 @@ c. Yes. No parameters are needed, but we can have a separate constructor that ch
 d. move(), canMove(), turn()
 e. none
 f. Set up an "obstacle course" in the Grid with different potential cases for Jumpers, and see if they behave as intended
+
+
+###PART FOUR###
+
+#QUESTIONS#
+
+1. Critter uses act(), getGrid(), getActors(), getMoveLocations(), selectMoveLocations(), makeMove() and getNeighbors();
+2. all critters check if the grid is empty, then puts all actors in an arraylist of actors, makes an arraylist of locations, selects a movelocation and then makes its move.
+3. 
